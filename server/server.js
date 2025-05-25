@@ -3,7 +3,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const MONGO_URI = "mongodb://localhost:27017/loyalty_rewards";
 
 app.use(cors());
