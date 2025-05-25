@@ -1,0 +1,108 @@
+# Loyalty Rewards App
+
+A simple, cloud-based loyalty rewards system for small businesses. Customers check in with their phone number, and businesses can easily track visits and reward loyalty.
+
+## Live Demo
+
+[View the Live Demo](https://loyalty-rewards-app-beige.vercel.app/)  
+
+
+---
+
+## Features
+
+- Fast, contactless customer check-in
+- Real-time rewards tracking
+- Easy-to-use interface for staff and customers
+- Works on any device
+- Secure and scalable (React frontend, Node.js/MongoDB backend)
+
+---
+
+## How It Works
+
+1. Customer enters their phone number at checkout.
+2. The system logs the visit and tracks rewards.
+3. Customers receive rewards after a set number of visits.
+
+---
+
+## Technology Stack
+
+- **Frontend:** React (deployed on Vercel)
+- **Backend:** Node.js, Express, MongoDB (deployed on Render)
+- **Database:** MongoDB Atlas
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js & npm
+- MongoDB Atlas account (for database)
+
+### Installation
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/x88-code/loyalty-rewards-app.git
+   cd loyalty-rewards-app
+   ```
+
+2. **Backend Setup:**
+   ```sh
+   cd server
+   npm install
+   # Create a .env file with your MongoDB URI
+   echo "MONGODB_URI=your-mongodb-uri" > .env
+   npm start
+   ```
+
+3. **Frontend Setup:**
+   ```sh
+   cd ../client
+   npm install
+   npm start
+   ```
+
+---
+
+## Environment Variables
+
+- **Backend:**  
+  - `MONGODB_URI` — Your MongoDB Atlas connection string
+
+- **Frontend:**  
+  - `REACT_APP_API_URL` — URL of your deployed backend (e.g., `https://loyalty-rewards-app.onrender.com`)
+
+---
+
+## Deployment
+
+- **Frontend:** Deploy to [Vercel](https://vercel.com)
+- **Backend:** Deploy to [Render](https://render.com) or similar
+
+---
+
+## Screenshot
+
+![App Screenshot](./screenshot.png)
+
+---
+
+## Pitch Deck
+
+See [`LoyalLink_Pitch_Deck_Styled.pptx`](./docs/LoyalLink_Pitch_Deck_Styled.pptx)
+
+---
+
+## License
+
+MIT
+
+---
+
+## Author
+
+- [0xErick](https://github.com/x88-code)
