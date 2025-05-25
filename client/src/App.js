@@ -4,6 +4,8 @@ import './App.css';
 import logo from './logo.png';
 
 
+const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+
 function App() {
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
@@ -12,7 +14,7 @@ function App() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/check-in', { phone });
+      const response = await axios.post(`${apiUrl}/check-in`, { phone });
       setMessage(response.data.message);
       setPhone('');
     } catch (err) {
