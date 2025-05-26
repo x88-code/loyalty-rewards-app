@@ -2,11 +2,6 @@
 
 A simple, cloud-based loyalty rewards system for small businesses. Customers check in with their phone number, and businesses can easily track visits and reward loyalty.
 
-## Live Demo
-
-[View the Live Demo](https://loyalty-rewards-app-beige.vercel.app/)  
-
-
 ---
 
 ## Features
@@ -29,9 +24,9 @@ A simple, cloud-based loyalty rewards system for small businesses. Customers che
 
 ## Technology Stack
 
-- **Frontend:** React (deployed on Vercel)
-- **Backend:** Node.js, Express, MongoDB (deployed on Render)
-- **Database:** MongoDB Atlas
+- **Frontend:** React (see [`client`](./client))
+- **Backend:** Node.js, Express, MongoDB (see [`server`](./server))
+- **Database:** MongoDB (local by default, can use MongoDB Atlas)
 
 ---
 
@@ -40,23 +35,23 @@ A simple, cloud-based loyalty rewards system for small businesses. Customers che
 ### Prerequisites
 
 - Node.js & npm
-- MongoDB Atlas account (for database)
+- MongoDB (local or Atlas)
 
 ### Installation
 
 1. **Clone the repository:**
    ```sh
    git clone https://github.com/x88-code/loyalty-rewards-app.git
-   cd loyalty-rewards-app
+   cd loyalty-rewards-app-mongo
    ```
 
 2. **Backend Setup:**
    ```sh
    cd server
    npm install
-   # Create a .env file with your MongoDB URI
-   echo "MONGODB_URI=your-mongodb-uri" > .env
-   npm start
+   # By default, connects to mongodb://localhost:27017/loyalty_rewards
+   # To use MongoDB Atlas, set the MONGO_URI environment variable
+   npm run dev
    ```
 
 3. **Frontend Setup:**
@@ -66,21 +61,32 @@ A simple, cloud-based loyalty rewards system for small businesses. Customers che
    npm start
    ```
 
+4. **Access the app:**
+   - Frontend: [http://localhost:3000](http://localhost:3000)
+   - Backend/API: [http://localhost:5000](http://localhost:5000)
+
 ---
 
 ## Environment Variables
 
 - **Backend:**  
-  - `MONGODB_URI` — Your MongoDB Atlas connection string
-
+  - `MONGO_URI` — (optional) Your MongoDB connection string. Defaults to local MongoDB.
 - **Frontend:**  
-  - `REACT_APP_API_URL` — URL of your deployed backend (e.g., `https://loyalty-rewards-app.onrender.com`)
+  - `REACT_APP_API_URL` — (optional) URL of your backend API (defaults to `http://localhost:5000`)
+
+---
+
+## Usage
+
+- Customers check in by entering their phone number.
+- Each check-in increments their visit count.
+- Progress bar shows visits toward next reward.
 
 ---
 
 ## Deployment
 
-- **Frontend:** Deploy to [Vercel](https://vercel.com)
+- **Frontend:** Deploy to [Vercel](https://vercel.com) or similar
 - **Backend:** Deploy to [Render](https://render.com) or similar
 
 ---
@@ -93,7 +99,7 @@ A simple, cloud-based loyalty rewards system for small businesses. Customers che
 
 ## Pitch Deck
 
-See [`Loyalty Rewards App.pdf`](./docs/Loyalty Rewards App.pdf)
+See [`Loyalty Rewards App.pdf`](./docs/Loyalty%20Rewards%20App.pdf)
 
 ---
 
